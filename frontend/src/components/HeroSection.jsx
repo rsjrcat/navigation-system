@@ -16,20 +16,20 @@ export default function HeroSection() {
       <header className="flex items-center justify-between px-8 lg:px-16 py-6 relative z-10">
         <div className="flex items-center gap-2">
           <div className="text-3xl font-bold">
-            <span className="text-white">inv</span>
+            <span className="text-white">Medent </span>
             <span className="text-orange-500">❍</span>
-            <span className="text-white">idea</span>
+            <span className="text-white">Medent Technologies</span>
           </div>
         </div>
         
         <div className="flex items-center gap-6">
           <a href="tel:+917292050505" className="flex items-center gap-2 hover:text-orange-500 transition-colors text-sm">
             <Phone size={16} />
-            <span>+91 7292 050505</span>
+            <span>+91 8696403065</span>
           </a>
           <a href="mailto:hello@invoidea.com" className="flex items-center gap-2 hover:text-orange-500 transition-colors text-sm">
             <Mail size={16} />
-            <span>hello@invoidea.com</span>
+            <span>hello@medenttechnologies.com</span>
           </a>
           <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2.5 rounded-full text-sm font-medium transition-all">
             Get a Free Quote
