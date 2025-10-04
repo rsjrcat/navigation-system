@@ -18,7 +18,7 @@ export default function HeroSection() {
           <div className="text-3xl font-bold">
             <span className="text-white">Medent </span>
             <span className="text-orange-500">❍</span>
-            <span className="text-white">Medent Technologies</span>
+            <span className="text-white">Technologies</span>
           </div>
         </div>
         
