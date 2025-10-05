@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Phone, Mail, MessageSquare } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 
 export default function HeroSection() {
   const [phone, setPhone] = useState("");
@@ -9,49 +9,48 @@ export default function HeroSection() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Radial Glow Background */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl opacity-20"></div>
-      <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-400 rounded-full blur-3xl opacity-15"></div>
-      <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-purple-500 rounded-full blur-3xl opacity-10"></div>
+      <div className="absolute top-0 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-[#5DAA4D] rounded-full blur-3xl opacity-20"></div>
+      <div className="absolute top-1/3 right-1/4 w-60 sm:w-80 h-60 sm:h-80 bg-[#3E7B2F] rounded-full blur-3xl opacity-15"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-56 sm:w-72 h-56 sm:h-72 bg-[#5DAA4D] rounded-full blur-3xl opacity-10"></div>
 
       {/* Header */}
-      <header className="flex items-center justify-between px-8 lg:px-16 py-6 relative z-10">
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="Medent Technologies Logo" className="h-10 w-auto" />
-          <h1 className="text-2xl lg:text-3xl font-bold tracking-wide">
+      <header className="flex items-center justify-between px-4 sm:px-8 lg:px-16 py-4 sm:py-6 relative z-10">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <img src={logo} alt="Medent Technologies Logo" className="h-8 sm:h-10 w-auto" />
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
             <span className="text-white">Medent </span>
-            <span className="text-orange-500">Technologies</span>
+            <span className="text-[#5DAA4D]">Technologies</span>
           </h1>
         </div>
 
-        <div className="flex items-center gap-6">
-          <a
-            href="tel:+918696403065"
-            className="flex items-center gap-2 hover:text-orange-500 transition-colors text-sm"
-          >
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+          <a href="tel:+918696403065" className="flex items-center gap-2 hover:text-[#5DAA4D] transition-colors text-xs sm:text-sm">
             <Phone size={16} />
             <span>+91 8696403065</span>
           </a>
-          <a
-            href="mailto:hello@medenttechnologies.com"
-            className="flex items-center gap-2 hover:text-orange-500 transition-colors text-sm"
-          >
+          <a href="mailto:hello@medenttechnologies.com" className="flex items-center gap-2 hover:text-[#5DAA4D] transition-colors text-xs sm:text-sm">
             <Mail size={16} />
             <span>hello@medenttechnologies.com</span>
           </a>
-          <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2.5 rounded-full text-sm font-medium transition-all">
+          <button className="bg-[#5DAA4D] hover:bg-[#3E7B2F] px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all">
             Get a Free Quote
           </button>
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="hover:bg-orange-600 px-5 py-3 rounded-full text-sm font-medium transition-all flex flex-col items-center justify-center"
-          >
-            <div className="flex flex-col gap-1">
-              <div className="w-5 h-0.5 bg-white"></div>
-              <div className="w-5 h-0.5 bg-white"></div>
-              <div className="w-5 h-0.5 bg-white"></div>
-            </div>
-          </button>
+          </div>
+          {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="hover:bg-[#3E7B2F] p-3 rounded-full transition-all flex flex-col items-center justify-center"
+        >
+          <div className="flex flex-col gap-1">
+            <div className="w-5 h-0.5 bg-white"></div>
+            <div className="w-5 h-0.5 bg-white"></div>
+            <div className="w-5 h-0.5 bg-white"></div>
+          </div>
+        </button>
         </div>
+
+        
       </header>
 
       {/* Fullscreen Navigation Menu */}
@@ -62,17 +61,17 @@ export default function HeroSection() {
       >
         <div className="flex flex-col h-full">
           {/* Menu Header */}
-          <div className="flex items-center justify-between px-8 lg:px-16 py-6">
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="Medent Technologies Logo" className="h-10 w-auto" />
-              <h1 className="text-2xl lg:text-3xl font-bold tracking-wide">
+          <div className="flex items-center justify-between px-6 sm:px-8 lg:px-16 py-6">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <img src={logo} alt="Medent Technologies Logo" className="h-8 sm:h-10 w-auto" />
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wide">
                 <span className="text-white">Medent </span>
-                <span className="text-orange-500">Technologies</span>
+                <span className="text-[#5DAA4D]">Technologies</span>
               </h1>
             </div>
             <button
               onClick={() => setMenuOpen(false)}
-              className="text-white hover:text-orange-500 transition-colors text-4xl"
+              className="text-white hover:text-[#5DAA4D] transition-colors text-3xl sm:text-4xl"
             >
               ×
             </button>
@@ -80,90 +79,42 @@ export default function HeroSection() {
 
           {/* Navigation Links */}
           <nav className="flex-1 flex items-center justify-center">
-            <ul className="space-y-8 text-center">
-              <li>
-                <a
-                  href="#home"
-                  className="text-5xl font-bold hover:text-orange-500 transition-colors"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="text-5xl font-bold hover:text-orange-500 transition-colors"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#portfolio"
-                  className="text-5xl font-bold hover:text-orange-500 transition-colors"
-                >
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="text-5xl font-bold hover:text-orange-500 transition-colors"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-5xl font-bold hover:text-orange-500 transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
+            <ul className="space-y-6 sm:space-y-8 text-center">
+              {["Home", "Services", "Portfolio", "About Us", "Contact"].map(
+                (item, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={`#${item.toLowerCase().replace(" ", "")}`}
+                      className="text-3xl sm:text-4xl lg:text-5xl font-bold hover:text-[#5DAA4D] transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </nav>
-
-          {/* Menu Footer */}
-          <div className="px-8 lg:px-16 py-8 border-t border-zinc-800">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
-              <a
-                href="tel:+918696403065"
-                className="flex items-center gap-2 hover:text-orange-500 transition-colors"
-              >
-                <Phone size={20} />
-                <span>+91 8696403065</span>
-              </a>
-              <a
-                href="mailto:hello@medenttechnologies.com"
-                className="flex items-center gap-2 hover:text-orange-500 transition-colors"
-              >
-                <Mail size={20} />
-                <span>hello@medenttechnologies.com</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Hero Section */}
-      <main className="container mx-auto px-8 lg:px-16 pt-24 pb-16 relative z-10">
+      <main className="container mx-auto px-4 sm:px-8 lg:px-16 pt-16 sm:pt-24 pb-12 sm:pb-16 relative z-10">
         <div className="text-center max-w-6xl mx-auto">
-          <p className="text-gray-400 uppercase tracking-wider text-xs font-medium mb-8">
+          <p className="text-gray-400 uppercase tracking-wider text-xs font-medium mb-6 sm:mb-8">
             THE BEST DIGITAL SERVICE PROVIDER
           </p>
 
-          <h1 className="text-4xl lg:text-6xl font-serif font-bold mb-8 leading-tight">
-            Stunning <span className="text-orange-500">Websites</span> &<br />
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-serif font-bold mb-6 sm:mb-8 leading-tight">
+            Stunning <span className="text-[#5DAA4D]">Websites</span> &<br />
             Powerful{" "}
             <span className="relative inline-block">
-              <span className="text-cyan-400">Apps</span>
-              <div className="absolute bottom-1 left-0 right-0 h-0.5 bg-cyan-400"></div>
+              <span className="text-[#3E7B2F]">Apps</span>
+              <div className="absolute bottom-1 left-0 right-0 h-0.5 bg-[#3E7B2F]"></div>
             </span>{" "}
             That Perform
           </h1>
 
-          <p className="text-base lg:text-lg text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-400 mb-8 sm:mb-12 max-w-3xl sm:max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
             Transform your business with cutting-edge websites and mobile
             applications. Our team creates custom, scalable solutions that help
             businesses of all sizes establish a powerful online presence and
@@ -171,41 +122,41 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Form */}
-          <div className="flex items-center justify-center gap-0 max-w-2xl mx-auto mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0 max-w-2xl mx-auto mb-8">
             <input
               type="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="Enter Your Mobile No  *"
-              className="flex-1 px-6 py-4 rounded-l-full bg-zinc-900 border border-zinc-800 focus:border-orange-500 focus:outline-none text-sm placeholder-gray-500"
+              placeholder="Enter Your Mobile No *"
+              className="w-full sm:flex-1 px-4 sm:px-6 py-3 sm:py-4 rounded-full sm:rounded-l-full bg-zinc-900 border border-zinc-800 focus:border-[#5DAA4D] focus:outline-none text-sm placeholder-gray-500"
             />
-            <button className="px-8 py-4 bg-orange-500 hover:bg-orange-600 rounded-r-full font-medium transition-all text-sm whitespace-nowrap">
+            <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-[#5DAA4D] hover:bg-[#3E7B2F] rounded-full sm:rounded-r-full font-medium transition-all text-sm whitespace-nowrap">
               Request a Callback
             </button>
           </div>
         </div>
       </main>
 
-      {/* Floating Action Buttons */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 flex flex-col z-50">
-        <button className="bg-orange-500 hover:bg-orange-600 px-5 py-4 transition-all flex flex-col items-center justify-center gap-1 text-xs">
-          <Phone size={20} />
-          <span className="font-medium">Call Us Now</span>
+      {/* Floating Action Buttons (hidden on xs) */}
+      <div className="hidden sm:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col z-50">
+        <button className="bg-[#5DAA4D] hover:bg-[#3E7B2F] px-4 sm:px-5 py-3 sm:py-4 transition-all flex flex-col items-center justify-center gap-1 text-xs">
+          <Phone size={18} />
+          <span className="font-medium">Call Us</span>
         </button>
-        <button className="bg-zinc-800 hover:bg-zinc-700 px-5 py-4 transition-all flex flex-col items-center justify-center gap-1 text-xs border-t border-zinc-700">
-          <Mail size={20} />
-          <span className="font-medium">Mail To Us</span>
+        <button className="bg-zinc-800 hover:bg-zinc-700 px-4 sm:px-5 py-3 sm:py-4 transition-all flex flex-col items-center justify-center gap-1 text-xs border-t border-zinc-700">
+          <Mail size={18} />
+          <span className="font-medium">Mail</span>
         </button>
-        <button className="bg-zinc-800 hover:bg-zinc-700 px-5 py-4 transition-all flex flex-col items-center justify-center gap-1 text-xs border-t border-zinc-700">
-          <MessageSquare size={20} />
+        <button className="bg-zinc-800 hover:bg-zinc-700 px-4 sm:px-5 py-3 sm:py-4 transition-all flex flex-col items-center justify-center gap-1 text-xs border-t border-zinc-700">
+          <MessageSquare size={18} />
           <span className="font-medium">Inquiry</span>
         </button>
       </div>
 
       {/* WhatsApp Floating Button */}
-      <button className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-all transform hover:scale-110 z-50">
+      <button className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 w-12 sm:w-14 h-12 sm:h-14 bg-[#5DAA4D] hover:bg-[#3E7B2F] rounded-full flex items-center justify-center shadow-lg transition-all transform hover:scale-110 z-50">
         <svg
-          className="w-8 h-8 text-white"
+          className="w-6 sm:w-8 h-6 sm:h-8 text-white"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
